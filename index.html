@@ -9,23 +9,27 @@
    |  - https://stackoverflow.com/a/11535520
    |  - https://stackoverflow.com/a/7691604
    |  - https://stackoverflow.com/a/21456799
+   |  - https://stackoverflow.com/a/43524587
+   |  - https://blog.rnsloan.com/2013/07/11/full-page-background-image/
    -->
 
   <head>
     <title>Matthew Drake-Free</title>
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
     <style>
+      html {
+        height: 100%;
+        background-image: url('background.jpg');
+        background-size: cover;
+        background-position: center top;
+        background-attachment: fixed;
+      }
       body  {
         color: white;
         color: rgba(255, 255, 255, 0.9);
         background-color: black;
         font-family: 'Cabin', sans-serif;
         text-align: center;
-        background-image: url('background.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center top;
-        background-attachment: fixed;
       }
       div#coming {
         position: fixed;
