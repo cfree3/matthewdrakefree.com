@@ -11,6 +11,11 @@
    |  - https://stackoverflow.com/a/21456799
    |  - https://stackoverflow.com/a/43524587
    |  - https://blog.rnsloan.com/2013/07/11/full-page-background-image/
+   |  - https://stackoverflow.com/a/446091/1534724
+   |  - https://stackoverflow.com/a/4729214/1534724
+   |  - https://stackoverflow.com/q/42252682/1534724
+   |  - https://stackoverflow.com/a/9485878/1534724
+   |  - https://stackoverflow.com/a/1027367/1534724
    -->
 
   <head>
@@ -66,9 +71,14 @@
         border: 2px solid white;
         border-radius: 15px;
         text-decoration: none;
+        margin-left: 1vw;
+        margin-right: 1vw;
       }
       a:hover {
         border: 2px solid black;
+      }
+      ul {
+        list-style-type: none;
       }
       @media screen and (orientation:landscape) {
         h1 {
@@ -99,7 +109,60 @@
           padding: 2.5vw;
         }
       }
+      div#shower {
+        display: none;
+        font-size: 1.1vw;
+      }
+      iframe#map {
+        width: 40vw;
+        height: 100%;
+        border: 0;
+      }
+      div#info {
+        width: 80%;
+        height: 80%;
+        display: flex;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2vw;
+        background-color: black;
+        background-color: rgba(0, 0, 0, 0.75);
+      }
+      div#info div {
+        margin-left: 2em;
+        margin-right: 2em;
+      }
+      div#shower a, div#shower a:visited {
+        background-color: black;
+        background-color: rgba(0, 0, 0, 0.75);
+        color: white;
+        border: 2px solid white;
+        border-radius: 15px;
+        text-decoration: none;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        line-height: 4vw;
+      }
+      div#shower a:hover {
+        border: 2px solid white;
+      }
     </style>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+    <script>
+      $(function() {
+        $('#shower-btn, #close').click(function() {
+          $('#shower').fadeToggle({
+            duration: 'fast'
+          });
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -111,6 +174,53 @@
       </h2>
       <div id="registry">
         <a href="https://smile.amazon.com/baby-reg/rebecca-drake-curtis-free-november-2017-clarkston/2CWK94DV2G5EB">View&nbsp;Registry</a>
+        <a id="shower-btn" href="#">View&nbsp;Map</a>
+      </div>
+    </div>
+    <div id="shower">
+
+      <div id="info">
+
+        <div>
+          <iframe
+            id="map"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBm3iz8VgYLfX4WYx0m5as0fOVfSnppVZE&q=place_id:ChIJ9ZsqDD4H9YgRArMuoD42EZk&zoom=16"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div id="parking">
+
+          <h2>Shower</h2>
+
+          <h3>Location & Parking</h3>
+
+          <p>
+            <a href="http://littleshopofstories.com/">Little&nbsp;Shop&nbsp;of&nbsp;Stories</a>
+            <a href="http://www.decaturga.com/city-government/city-departments/economic-development/parking">Parking&nbsp;in&nbsp;Decatur,&nbsp;GA</a>
+            <a href="http://www.decaturga.com/home/showdocument?id=9965">Detailed&nbsp;Parking&nbsp;Map</a>
+          </p>
+
+          <h3>Our advice...</h3>
+
+          <p>
+            Grab a <strong>metered parking space</strong> if you can! Metered
+            parking in the city is free on Sundays. If that doesn't work out,
+            head over to the Courthouse Deck (see parking map). It's a bit of a
+            walk, but you'll save money that way. If someone in your party
+            needs to be dropped off, you can pull through the metered drive
+            just in front of Little Shop and let your passenger(s) out there!
+          </p>
+
+          <p>
+            If you want to park close, and there are no metered spots
+            available, you can park in the Town Center Deck, just across E.
+            Ponce, for $10 (flat rate).
+          </p>
+
+          <a id="close" href="#">Close</a>
+
+        </div>
       </div>
     </div>
   </body>
