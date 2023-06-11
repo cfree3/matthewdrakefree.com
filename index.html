@@ -36,7 +36,7 @@
         font-family: 'Cabin', sans-serif;
         text-align: center;
       }
-      div#coming {
+      div#name {
         position: fixed;
         top: 50%;
         left: 50%;
@@ -48,9 +48,6 @@
       }
       h2 {
         font-weight: normal;
-      }
-      div#registry {
-        font-size: 2vw;
       }
       div#overlay {
         position: absolute;
@@ -88,9 +85,6 @@
         h3 {
           font-size: 2vw;
         }
-        div#registry {
-          font-size: 2vw;
-        }
         a {
           padding: 0.5vw;
         }
@@ -105,81 +99,23 @@
         h3 {
           font-size: 5vw;
         }
-        div#registry {
-          margin-top: 10vw;
-        }
         a {
           font-size: 7vw;
           padding: 2.5vw;
           line-height: 17vw;
         }
       }
-      div#shower {
-        display: none;
-      }
       #map iframe {
         width: 40vw;
         height: 100%;
         border: 0;
       }
-      div#parking {
-        overflow: auto;
-        height: 100%;
-      }
-      div#info {
-        display: flex;
-        width: 80%;
-        height: 80%;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 2vw;
-        background-color: black;
-        background-color: rgba(0, 0, 0, 0.85);
-        border-radius: 15px;
-      }
-      div#info div {
-        margin-left: 2em;
-        margin-right: 2em;
-      }
-      div#shower a, div#shower a:visited {
-        background-color: black;
-        background-color: rgba(0, 0, 0, 0.75);
-        color: white;
-        border: 2px solid white;
-        border-radius: 15px;
-        text-decoration: none;
-        margin-left: 1vw;
-        margin-right: 1vw;
-        line-height: 4vw;
-      }
-      div#shower a:hover {
-        border: 2px solid white;
-      }
       @media screen and (orientation:landscape) {
-        div#shower {
-          font-size: 1.1vw;
-        }
-        div#info {
-          display: flex;
-        }
         a#close, a#close:visited {
           font-size: 1vw !important;
         }
       }
       @media screen and (orientation:portrait) {
-        #map iframe {
-          display: none;
-        }
-        div#info {
-          display: block;
-        }
-        div#shower a, div#shower a:visited {
-          font-size: 5vw;
-          padding: 1vw;
-          line-height: 10vw;
-        }
         a#close, a#close:visited {
           font-size: 3vw !important;
         }
@@ -191,78 +127,12 @@
         border: none !important;
       }
     </style>
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous">
-    </script>
-    <script>
-      $(function() {
-        $('#shower-btn, #close').click(function() {
-          $('#shower').fadeToggle({
-            duration: 'fast'
-          });
-        });
-      });
-    </script>
   </head>
 
   <body>
     <div id="overlay"></div>
-    <div id="coming">
+    <div id="name">
       <h1>Matthew<br/>Drake&#8209;Free</h1>
-      <h2>
-        Coming November&nbsp;2017!
-      </h2>
-      <div id="registry">
-        <a href="https://smile.amazon.com/baby-reg/rebecca-drake-curtis-free-november-2017-clarkston/2CWK94DV2G5EB">View&nbsp;Registry</a>
-        <a id="shower-btn" href="#">View&nbsp;Map</a>
-      </div>
-    </div>
-    <div id="shower">
-
-      <div id="info">
-
-        <div id="map">
-          <iframe
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBm3iz8VgYLfX4WYx0m5as0fOVfSnppVZE&q=place_id:ChIJ9ZsqDD4H9YgRArMuoD42EZk&zoom=16"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <div id="parking">
-
-          <h2>Shower</h2>
-
-          <h3>Location & Parking</h3>
-
-          <p>
-            <a href="http://littleshopofstories.com/">Little&nbsp;Shop&nbsp;of&nbsp;Stories</a>
-            <a href="http://www.decaturga.com/city-government/city-departments/economic-development/parking">Parking&nbsp;in&nbsp;Decatur,&nbsp;GA</a>
-            <a href="http://www.decaturga.com/home/showdocument?id=9965">Detailed&nbsp;Parking&nbsp;Map</a>
-          </p>
-
-          <h3>Our advice...</h3>
-
-          <p>
-            Grab a <strong>metered parking space</strong> if you can! Metered
-            parking in the city is free on Sundays. If that doesn't work out,
-            head over to the Courthouse Deck (see parking map). It's a bit of a
-            walk, but you'll save money that way. If someone in your party
-            needs to be dropped off, you can pull through the metered drive
-            just in front of Little Shop and let your passenger(s) out there!
-          </p>
-
-          <p>
-            If you want to park close, and there are no metered spots
-            available, you can park in the Town Center Deck, just across E.
-            Ponce, for $10 (flat rate).
-          </p>
-
-          <a id="close" href="#">Close</a>
-
-        </div>
-      </div>
     </div>
   </body>
 
